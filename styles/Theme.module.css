@@ -1,0 +1,197 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.previewImage {
+  height: 500px;
+  width: 500px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 8px;
+}
+
+.mintInfoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 25px 25px;
+  min-height: 80vh;
+  max-width: 95vw;
+  gap: 2%;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+
+.infoSide {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 45%;
+  height: 100%;
+  max-width: 600px;
+  padding: 25px;
+}
+
+.infoTitle {
+  font-size: 2rem;
+}
+
+.description {
+  opacity: 0.7;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.imageSide {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.mainButton {
+  cursor: pointer;
+  display: inline-flex;
+  appearance: none;
+  align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  font-weight: 400;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-duration: 200ms;
+  min-width: 3rem;
+  font-size: 1rem;
+  background: #e5e5ea;
+  background-image: linear-gradient(
+    to left,
+    var(--color-primary) 0%,
+    var(--color-secondary) 101.52%
+  );
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  text-align: center;
+  border-radius: 9999px;
+  border-style: none;
+  margin: 5px;
+}
+
+.mainButton:hover {
+  opacity: 0.8;
+}
+
+.mintCompletionArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  max-width: 300px;
+}
+
+.mintAreaLeft {
+  opacity: 0.75;
+}
+
+.mintAreaRight {
+  opacity: 0.75;
+}
+
+.spacerTop {
+  margin-top: 16px;
+}
+
+.spacerBottom {
+  margin-bottom: 16px;
+}
+
+.logo {
+  cursor: pointer;
+  padding: 10px;
+  max-width: 150px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+
+.customfield {
+  font-size: 14px;
+  position: relative;
+  border-bottom: 1px solid white;
+  outline: 2px solid transparent;
+  margin: 5px;
+}
+
+.customfield input {
+  background: transparent;
+  border: 2px transparent;
+  border-bottom: #fff;
+  padding: 12px;
+  width: 220px;
+  font-size: 16px;
+  color: #fff;
+  outline: 2px solid transparent;
+}
+
+.customfield .placeholder {
+  position: absolute;
+  left: 12px;
+  bottom: 50%;
+  top: 22px;  
+  transform: translateY(-50%);
+  width: calc(100% - 24px);  
+  color: #aaa;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.textInput {
+  width: 48px;
+  background-color: transparent;
+  border: 1px solid grey;
+  border-radius: 8px;
+  color: #fff;
+  height: 48px;
+  padding: 0 16px;
+  font-size: 1rem;
+}
+
+/* On mobile, make the .mintInfoContainer stack vertically */
+@media screen and (max-width: 850px) {
+  .mintInfoContainer {
+    flex-direction: column;
+    padding-bottom: 5%;
+  }
+
+  .infoSide {
+    width: 100%;
+  }
+
+  .imageSide {
+    width: 100%;
+  }
+}
