@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import {
   CheckoutWithCard,
   CheckoutWithEth,
@@ -11,9 +10,6 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { fetchClientSecret } from "../lib/utils";
 import styles from "../styles/Theme.module.css";
-
-// Put Your Contract Address here
-const CONTRACT_ADDRESS = "0x4d0ae5B29Ee282CBaad2678DfD7909F0cf4770A2";
 
 // Put your contract ID here
 const contractID = "a97715b8-f7d5-4883-b8e2-2bd52d926fd0";
