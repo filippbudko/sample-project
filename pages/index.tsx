@@ -37,6 +37,20 @@ const Home: NextPage = () => {
 
   return (
     <PaperSDKProvider chainName="Goerli">
+      
+      <div id="background-wrap">
+      
+        <div className="bubble x1"></div>
+        <div className="bubble x2"></div>
+        <div className="bubble x3"></div>
+        <div className="bubble x4"></div>
+        <div className="bubble x5"></div>
+        <div className="bubble x6"></div>
+        <div className="bubble x7"></div>
+        <div className="bubble x8"></div>
+        <div className="bubble x9"></div>
+        <div className="bubble x10"></div>
+      </div>
       <div className={styles.container}>
         <div className={styles.header}>
           <img
@@ -52,6 +66,7 @@ const Home: NextPage = () => {
             <img
               src={`/crab.png`}
               alt="Crab NFT Image"
+              className={styles.image}
             />
           </div>
 
@@ -132,6 +147,7 @@ const ChooseWalletPage = (props: {
         />
         <span className={styles.placeholder}>Enter Email</span>
       </label>
+      
       <CreateWallet
         emailAddress={email}
         onSuccess={(user: PaperUser) => {
@@ -147,12 +163,6 @@ const ChooseWalletPage = (props: {
           console.log("error", error);
         }}
       >
-        <button
-          className={styles.mainButton}
-          disabled={isPendingEmailConfirmation}
-        >
-          Verify Email
-        </button>
       </CreateWallet>
     </div>
   );
@@ -197,14 +207,16 @@ const CheckoutWithCardPage = (props: {
   useEffect(() => {
     fetchClientSecret(contractID, recipientWalletAddress, email).then(
       (clientSecret) => {
+        console.log(clientSecret)
         setClientSecret(clientSecret);
       }
-    );
+    ).catch(e =>
+      console.log(e));
+
   }, [email, recipientWalletAddress]);
 
   return (
     <div>
-      <div>its checkout with card</div>
       {!!clientSecret && (
         <CheckoutWithCard
           sdkClientSecret={clientSecret}
@@ -269,8 +281,7 @@ const PaymentCompletePage = () => {
   return (
     <div>
       <p className={styles.spacerBottom}>
-        Thanks for claiming the Paper x Web3SF NFT! Hope you enjoyed our
-        workshop and learned how to 10x your paying customers with Web2.5. Click
+        Thanks for claiming the this NFT! Click
         the button below to view your Paper Wallet and view your NFT.
       </p>
       <button className={styles.mainButton}>

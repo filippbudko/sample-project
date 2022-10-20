@@ -6,11 +6,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Head>
-        <title>Paper x Web3SF Workshop: How to 10x your paying customers with Web2.5</title>
+        <title>Paper Checkout Elements Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="A boilerplate for using Paper's Checkout Elements React SDK with a custom ERC-721 contract."
+          content="A template for using Paper's Checkout Elements React SDK with a custom contract ERC-721."
         />
         <meta
           name="keywords"

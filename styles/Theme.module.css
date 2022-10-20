@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   width: 100%;
   padding: 25px 25px;
   min-height: 80vh;
@@ -31,7 +31,6 @@
 .infoSide {
   display: flex;
   flex-direction: column;
-  align-items: left;
   width: 45%;
   height: 100%;
   max-width: 600px;
@@ -52,11 +51,11 @@
   width: 45%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 
 .image {
-  border-radius: 16px;
+  border-radius: 40px;
   padding: 25px;
 }
 
@@ -78,7 +77,6 @@
   transition-duration: 200ms;
   min-width: 3rem;
   font-size: 1rem;
-  background: #e5e5ea;
   background-image: linear-gradient(
     to left,
     var(--color-primary) 0%,
