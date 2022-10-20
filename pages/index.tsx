@@ -65,7 +65,7 @@ const Home: NextPage = () => {
             {/* Image Preview of NFTs */}
             <img
               src={`/crab.png`}
-              alt="Crab NFT Image"
+              alt="Crab NFT"
               className={styles.image}
             />
           </div>
@@ -131,8 +131,6 @@ const ChooseWalletPage = (props: {
   const setCurrentPage = props.setCurrentPage;
   const setEmail = props.setEmail;
   const email = props.email;
-  const [isPendingEmailConfirmation, setIsPendingEmailConfirmation] =
-    useState(false);
 
   return (
     <div>
@@ -156,13 +154,14 @@ const ChooseWalletPage = (props: {
           setRecipientWalletAddress(user.walletAddress);
           setCurrentPage(CheckoutPage.CHOOSE_PAYMENT_METHOD);
         }}
-        onEmailVerificationInitiated={() => {
-          setIsPendingEmailConfirmation(true);
-        }}
         onError={(error) => {
           console.log("error", error);
         }}
       >
+        {/* @ts-ignore */}
+        <button className={styles.mainButton}>
+          Verify Email
+        </button>
       </CreateWallet>
     </div>
   );
