@@ -45,7 +45,11 @@ iframe {
 }
 
 body{
-  background-image: url("../public/background.jpeg");
+  background-image: url('https://img.freepik.com/premium-vector/sea-background-video-conferencing_23-2148631702.jpg?w=1480');
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	color: #fff;
 	font: 100% Roboto, Arial, Sans Serif;
 	height: 100vh;
